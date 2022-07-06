@@ -1,4 +1,5 @@
 n = int(input())
-li = [int(input()) for _ in range(n)]
-for i in li.sort():
+li = list(int(input()) for _ in range(n))
+
+for i in sorted(li):
     print(i)
