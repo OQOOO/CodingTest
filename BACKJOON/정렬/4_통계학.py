@@ -19,3 +19,5 @@ else:
     print(li[0][0])
 
 print(max(arr) - min(arr)) # 범위
+
+# N개의 수에서 산술평균, 중앙값, 최빈값, 범위를 구하는 문제
