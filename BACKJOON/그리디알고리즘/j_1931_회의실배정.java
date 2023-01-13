@@ -21,10 +21,13 @@ public class j_1931_회의실배정 {
         }
 
         // 계산
+
+        // 회의실 순서 정렬 - 끝나는 시간, 시작시간 순서
+        // (o1, o2)는 o1이 o2보다 앞으로 오게 정렬한다는 의미
         Arrays.sort(meetArr, (o1, o2) -> {
-            if (o1[1] == o2[1]) {
+            if (o1[1] == o2[1]) { // 끝나는 시간이 같을 때 시작시간 정렬
                 return Integer.compare(o1[0], o2[0]);
-            } else {
+            } else { // 다를때 끝나는시간 정렬
                 return Integer.compare(o1[1], o2[1]);
             }
         });

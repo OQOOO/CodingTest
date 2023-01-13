@@ -1,2 +1,6 @@
+import sys
+input = sys.stdin.readline
 
-print( int( "5"))
+n = input().split()
+
+print(n)

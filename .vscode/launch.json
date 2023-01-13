@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch j_1932_정수삼각형",
+            "request": "launch",
+            "mainClass": "BACKJOON.동적계획법1.j_1932_정수삼각형",
+            "projectName": "CodingTest_a1dcce51"
+        },
+        {
+            "type": "java",
+            "name": "Launch j_10844_쉬운계단수",
+            "request": "launch",
+            "mainClass": "BACKJOON.동적계획법1.j_10844_쉬운계단수",
+            "projectName": "CodingTest_a1dcce51"
+        },
+        {
+            "type": "java",
+            "name": "Launch j_9461_파도반수열",
+            "request": "launch",
+            "mainClass": "BACKJOON.동적계획법1.j_9461_파도반수열",
+            "projectName": "CodingTest_a1dcce51"
+        },
+        {
+            "type": "java",
             "name": "Launch j_1931_회의실배정",
             "request": "launch",
             "mainClass": "BACKJOON.그리디알고리즘.j_1931_회의실배정",
