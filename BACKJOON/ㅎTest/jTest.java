@@ -1,61 +1,34 @@
 package BACKJOON.ㅎTest;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class jTest {
-    static void print(int i) {
-        System.out.println(i);
-    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
 
-    static int binarySearch(int[] arr, int key) {
-        int lo = 0;
-        int hi = arr.length - 1;
-        while (lo <= hi) {
-            final int mid = (lo + hi) / 2;
-            if (key < arr[mid]) {
-                hi = mid - 1;
-            } else if (key > arr[mid]) {
-                lo = mid + 1;
-            } else {
-                System.out.println("find");
-                return arr[mid];
-            }
+        int arrLen = Integer.parseInt(st.nextToken());
+        int qNum = Integer.parseInt(st.nextToken());
+        int[] arr = new int[arrLen];
+        st = new StringTokenizer(bf.readLine());
+        for (int i = 0; i < arrLen; ++i) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
-        return 0;
-    }
-    static int upperBound(int[] arr, int key) {
-        int lo = 0;
-        int hi = arr.length - 1;
-        while (lo < hi) {
-            final int mid = (lo + hi) / 2;
-            if (key <= arr[mid]) {
-                hi = mid;
-            } else {
-                lo = mid + 1;
-            }
+
+        int[] sumArr = new int[arrLen + 1];
+        for (int i = 1; i < arrLen + 1; ++i) {
+            sumArr[i] = sumArr[i-1] + arr[i-1];
+            System.out.print(sumArr[i] + " ");
         }
-        return arr[hi];
-    }
-    static int lowerBound(int[] arr, int key) {
-        int lo = 0;
-        int hi = arr.length - 1;
-        while (lo < hi) {
-            final int mid = (lo + hi) / 2;
-            if (key < arr[mid]) {
-                hi = mid;
-            } else {
-                lo = mid + 1;
-            }
+
+        for (int i = 0; i < qNum; ++i) {
+            st = new StringTokenizer(bf.readLine());
+            int lo = Integer.parseInt(st.nextToken());
+            int hi = Integer.parseInt(st.nextToken());
+            System.out.println(">>>" + (sumArr[hi] - sumArr[lo-1]));
         }
-        return lo;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {0,1,2,3, 7,8,9};
-
-        int target = 6;
-        
-        int answer = lowerBound(arr, target);
-
-        System.out.println(answer);
 
     }
 }

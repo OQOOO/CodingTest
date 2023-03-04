@@ -13,9 +13,8 @@ for _ in range(n):
         queue.append(int(ipt[1]))
     
     elif ipt[0] == "pop":
-        if queue:        
-            print(queue[0])
-            queue.popleft()
+        if queue:                    
+            print(queue.popleft())
         else:
             print(-1)
             
